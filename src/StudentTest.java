@@ -21,7 +21,7 @@ public class StudentTest {
     @Test
     public void getAverage() {
         assertEquals(88.0, s1.getAverage(), 0.0);
-        assertEquals(75.0, s2.getAverage(), 0.0);
+        assertEquals(62.5, s2.getAverage(), 0.0);
     }
 
     @Test
@@ -33,6 +33,6 @@ public class StudentTest {
     @Test
     public void toString1() {
         assertEquals("Name: Mary Test1: 85.0 Test2: 91.0", s1.toString());
-        assertEquals("Name: Max Test1: 100.0 Test2: 50.0", s2.toString());
+        assertEquals("Name: Max Test1: 75.0 Test2: 50.0", s2.toString());
     }
 }

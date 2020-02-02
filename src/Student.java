@@ -12,7 +12,8 @@ public class Student
     private String name;
     private double test1;
     private double test2;
-    static Scanner scan = new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
+    //declare instance data
 
     //-----------------------------------------------
     //constructor
@@ -22,6 +23,7 @@ public class Student
         name = studentName;
         test1 = 0;
         test2 = 0;
+        //add body of constructor
     }
 
     //-----------------------------------------------
@@ -31,31 +33,37 @@ public class Student
     public void inputGrades()
     {
 
-        test1 = scan.nextDouble();
-        test2 = scan.nextDouble();
+        System.out.println("Please enter the student's score for test 1");
+        test1 = input.nextDouble();
+        System.out.println("Please enter the student's score for test 2");
+        test2 = input.nextDouble();
+        //add body of inputGrades
     }
 
     //-----------------------------------------------
     //getAverage: compute and return the student's test average
     //-----------------------------------------------
-
-    public double getAverage()
-    {
-        return (test1 + test2) / 2;
+    public double getAverage() {
+        //add header for getAverage
+        double ave = (test1 + test2) / 2;
+        return ave;
+        //add body of getAverage
     }
+
 
     //-----------------------------------------------
     //getName: print the student's name
     //-----------------------------------------------
 
-    public String getName()
-    {
+    //add header for printName
+    public String getName(){
+        //add body of printName
         return name;
     }
-
-    public String toString() {
-        return "Name: " + name + " Test1: " + test1 + " Test2: " + test2;
+    ////////////////////////////////////////////这个地方有问题 printname没有link
+    public String toString(){
+        return "Name: "+ name + " \n" + "Test1: " + test1 + "\n"+"Test2: "+ test2;
     }
-
-
+    // toString method:  Output in the following format
+    // Name: Joe  Test1: 85  Test2: 91
 }

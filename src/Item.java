@@ -1,28 +1,22 @@
 public class Item {
-
-    private String number;
-    private String description;
+    private String number = "";
+    private String description = "";
     private double price;
-
-    public Item(String number, String description, double price) {
-        this.number = number;
-        this.description = description;
-        if (price < 0)
-            this.price = 0;
-        else
-            this.price = price;
+    Item (String one, String two, double three) {
+        number = one;
+        description = two;
+        price = three;
+        if(price < 0){
+            price = 0;
+        }
+    }
+    public double getTotalPrice(int num){
+        if(num <= 0)
+            num = 0;
+        return price;
     }
 
-    public double getTotalPrice(int quantity) {
-        if (quantity < 0)
-            return 0;
-        else
-            return quantity * this.price;
+    public String toString(){
+        return "Item: "+ number + "\nPrice: "+ price + "\nDescription: " + description;
     }
-
-    public String toString() {
-        return "Item: " + this.number + "\nPrice: $" + this.price + "\nDescription: " + this.description;
-    }
-
-
 }
