@@ -9,7 +9,7 @@ public class Fraction {
             this.denominator = d;
         } else if (n > 0 && d < 0) {
             this.numerator = -n;
-            this.numerator = -d;
+            this.denominator = -d;
         } else {
             this.numerator = Math.abs(n);
             this.denominator = Math.abs(d);
